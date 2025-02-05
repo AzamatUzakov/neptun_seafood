@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="../style.css">
+   <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="main_container">
+        <header class="header">
+            <div class="logo"><img src="../img/logo.png" alt=""></div>
+
+            <div class="hrefs">
+                <a href="../index.html">HOME</a>
+                <a href="#">ПРОДУКТЫ</a>
+                <a href="#">КОНТАКТЫ</a>
+            </div>
+
+            <div class="telBasket">
+                <p>916-956-5019</p>
+                <a href="basket.html">
+                    <div class="supIndex">
+                        <p>0</p>
+                        <img src="../img/Vector.png" alt="basketLogo" class="basketLogo">
+                    </div>
+                </a>
+            </div>
+        </header>
+
+        <main>
+            <h2>Корзина</h2>
+            <div class="cart-items"></div>
+            <p><b>Общая сумма: <span class="total-price">0</span>$</b></p>
+            <button class="clear-cart">Очистить корзину</button>
+        </main>
+
+
+        <!-- Кнопка оформления заказа -->
+        <button class="checkout">🛍 Оформить заказ</button>
+
+        <!-- Модальное окно -->
+        <div id="orderModal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Оформление заказа</h2>
+                <input type="text" id="customer-name" placeholder="Введите ваше имя">
+                <input type="tel" id="customer-phone" placeholder="Введите номер телефона">
+                <textarea id="customer-comment" placeholder="Комментарий к заказу"></textarea>
+                <button id="confirmOrder">Подтвердить заказ</button>
+            </div>
+        </div>
+
+        <!-- Стили для модального окна -->
+
+    </div>
+
+    <script src="basket.js"></script>
+</body>
+
+</html>
