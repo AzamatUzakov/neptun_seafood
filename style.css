@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", serif;
+}
+
+
+body {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+}
+
+.telBasket {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.supIndex p {
+    background-color: red;
+    /*   width: 15px;
+    height: 15px;
+   */
+    padding: 0px 5px;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: white;
+    font-weight: 600;
+    position: absolute;
+    top: -45%;
+    right: -43%;
+}
+
+.supIndex {
+    position: relative;
+}
+
+.hrefs {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.hrefs a {
+    position: relative;
+    text-decoration: none;
+    font-size: 14px;
+    color: #151515;
+    padding-bottom: 2px;
+}
+
+.hrefs a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #151515;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-out;
+}
+
+.hrefs a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.telBasket p {
+    font-size: 14px;
+}
+
+
+/* ////////////////////////////////////// */
+
+.VideoSection {
+    width: 100%;
+}
+
+.VideoSection video {
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+}
+
+/* ////////////////////////////////////////////// */
+
+
+
+.SecondSection {
+    width: 100%;
+    margin: 60px 0;
+}
+
+.SecondSection .item {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.SecondSection .item p {
+    color: #5E5E5E;
+    width: 40%;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+/* ////////////////////////////////////// */
+
+
+.ThirdSection {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.ThirdSection video {
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+}
+
+/* //////////////////////////////////////////////// */
+.FouthSection {
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.products {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    row-gap: 80px;
+    flex-wrap: wrap;
+}
+
+
+.elem {
+    width: 230px;
+    height: 100%;
+    padding: 10px;
+}
+
+.elem img {
+    width: 100%;
+}
+
+.elem h4 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 22.4px;
+}
+
+.elem b {
+    font-size: 17px;
+    font-weight: 800;
+    margin: 10px 0;
+    display: block;
+}
+
+.bottoms {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.calck {
+    display: flex;
+    align-items: center;
+    gap: 0px
+}
+
+.minus {
+    width: 25px;
+    height: 25px;
+    background-color: #BFBFBF;
+    cursor: pointer;
+    border: 1px solid gray;
+}
+
+.nums {
+    width: 40px;
+    height: 25px;
+    text-align: center;
+    background-color: #D9D9D9;
+}
+
+.plusBtn {
+    width: 25px;
+    border: 1px solid gray;
+    height: 25px;
+    background-color: #BFBFBF;
+    cursor: pointer;
+}
+
+.AddBassket {
+    width: 100%;
+    background-color: #0F5B00;
+    color: white;
+    height: 25px;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .4s ease-in-out
+}
+
+.AddBassket:hover {
+    background-color: gainsboro;
+    color: black;
+    transition: .4s ease-in-out;
+}
