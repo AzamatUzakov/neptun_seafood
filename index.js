@@ -79,28 +79,23 @@ function addToCart(product, quantity) {
     updateCartCounter();
 }
 
-
-
-
 function displayProducts() {
     let productsBox = document.querySelector(".products");
     productsBox.innerHTML = "";
 
-    // Загружаем товары из localStorage или используем массив по умолчанию
-    const storedProducts = JSON.parse(localStorage.getItem("products")) || products;
-
-    storedProducts.forEach(product => {
+    products.forEach(product => {
         productsBox.innerHTML += `
             <div class="elem">
                 <img src="${product.image}" alt="${product.name}">
                 <h4>${product.name}</h4>
                 <p><b>${product.price}$</b></p>
-                <div class="bottoms">
-                    <div class="calck">
+                   <div class="bottoms">
+                  <div class="calck">
                         <p class="minus"><img src="./img/free-icon-minus-2550003.png" alt=""></p>
                         <p class="nums">0</p>
                         <p class="plusBtn"><img src="./img/free-icon-plus-2549959.png" alt=""></p>
                     </div>
+             
                     <div class="AddBassket" data-id="${product.id}">В корзину</div>
                 </div>
             </div>
@@ -130,7 +125,7 @@ function displayProducts() {
     addButtons.forEach((button, index) => {
         button.onclick = () => {
             let productId = Number(button.dataset.id);
-            let selectedProduct = storedProducts.find(p => p.id === productId);
+            let selectedProduct = products.find(p => p.id === productId);
             let quantity = Number(nums[index].textContent);
             addToCart(selectedProduct, quantity);
 
@@ -143,4 +138,3 @@ function displayProducts() {
 }
 
 displayProducts();
-
